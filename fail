@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cstdlib>
+#include <string.h>
+using namespace std;
+
+class Student {
+protected:
+    char fac[20];
+    char spec[30];
+    char name[20];
+public:
+    Student(char *f, char *s, char *n);
+    void print();
+};
+
+Student :: Student(char *f, char *s, char *n) {
+    strcpy(fac, f);
+    strcpy(spec, s);
+    strcpy(name, n);
+}
+
+class Starosta : Student {
+protected:
+    char group[10];
+public:
+    Starosta(char *f, char *s, char *n, char *g);
+    void journal()
+    {
+        cout << "Journal filled" << endl;
+    }
+    void print();
+};
+
+Starosta :: Starosta (char *f, char *s, char *n, char *g) {
+    strcpy(group, g);
+}
+
+int main()
+{
+    Starosta Yarik("IT", "Prikladnaya Informatika", "Yaroslav Yudin", "INBO-02-17");
+    //Yarik.journal;
+    return 0;
+}
