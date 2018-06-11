@@ -45,5 +45,6 @@ int main()
     Starosta Yaroslav("IT", "Prikladnaya Informatika", "Yaroslav Yudin", "INBO-02-17");
     Yaroslav.print();
     Yaroslav.journal();
+    
     return 0;
 }
