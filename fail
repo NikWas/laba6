@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string.h>
+
 using namespace std;
 
 class Student {
@@ -28,16 +29,21 @@ public:
     {
         cout << "Journal filled" << endl;
     }
-    void print();
+    void print()
+    {
+        cout << name << endl << fac << ", " << spec << endl;
+    };
 };
 
-Starosta :: Starosta (char *f, char *s, char *n, char *g) {
+Starosta :: Starosta (char *f, char *s, char *n, char *g) :
+    Student(f, s, n) {
     strcpy(group, g);
 }
 
 int main()
 {
-    Starosta Yarik("IT", "Prikladnaya Informatika", "Yaroslav Yudin", "INBO-02-17");
-    //Yarik.journal;
+    Starosta Yaroslav("IT", "Prikladnaya Informatika", "Yaroslav Yudin", "INBO-02-17");
+    Yaroslav.print();
+    Yaroslav.journal();
     return 0;
 }
